@@ -1,0 +1,22 @@
+{
+  "name": "api-guardian-server",
+  "version": "0.1.0",
+  "description": "API Guardian central backend service",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
+    "test": "node --test tests/health.test.js tests/projects.test.js tests/pairing.test.js tests/errors.test.js tests/mobile-pairing-flow.test.js tests/push-notification.test.js tests/mobile-device-auth.test.js tests/e2e-phase5-verification.test.js tests/security-audit.test.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.18.3",
+    "express-rate-limit": "^8.7.1",
+    "mongoose": "^8.3.4"
+  },
+  "devDependencies": {
+    "mongodb-memory-server": "^11.3.0",
+    "supertest": "^7.0.0"
+  }
+}
