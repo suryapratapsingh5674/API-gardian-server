@@ -25,6 +25,14 @@ app.use(cors());
 
 // Health check endpoint. Useful for deployment platforms and quick testing.
 // Returns 200 OK with a simple JSON response.
+app.get('/', (req, res) => {
+  res.json({
+    status: 'ok',
+    service: 'api-guardian-server',
+    version: '0.1.0',
+  });
+});
+
 app.get('/health', (req, res) => {
   res.json({
     status: 'ok',
